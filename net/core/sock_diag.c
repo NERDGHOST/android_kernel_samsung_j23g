@@ -160,7 +160,7 @@ static int __sock_diag_cmd(struct sk_buff *skb, struct nlmsghdr *nlh)
 	else if (nlh->nlmsg_type == SOCK_DESTROY && hndl->destroy)
 		err = hndl->destroy(skb, nlh);
 	else
-		err = -EOPNOTSUPP
+		err = -EOPNOTSUPP;
 	mutex_unlock(&sock_diag_table_mutex);
 
 	return err;
