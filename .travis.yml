@@ -20,7 +20,7 @@ install: true
 
 script:
   # compiling commands (main)
-  - make j23g-dt_defconfig
+  - make cyanogen_j23g_defconfig
   - make 2>> $OFOLDER/zEWlog_$(date +%b-%d-%Y-%H:%M).txt
   # this part uploads output to a cloud
   - cd $OFOLDER
